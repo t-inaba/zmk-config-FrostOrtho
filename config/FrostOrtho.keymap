@@ -18,7 +18,44 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 6 10000>; };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        COMB_BS {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        COMBO_ENTER {
+            bindings = <&kp ENTER>;
+            key-positions = <18 19>;
+        };
+
+        COMBO_ESC {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+        };
+
+        COMBO_TAB {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+        };
+
+        COMBO_DEL {
+            bindings = <&kp DELETE>;
+            key-positions = <7 8>;
+        };
+
+        COMBO_INS {
+            bindings = <&kp INSERT>;
+            key-positions = <6 5>;
+        };
+
+        COMBO_ZENHAN {
+            bindings = <&kp LANG_ZENKAKUHANKAKU>;
+            key-positions = <20 21>;
+        };
+    };
 
     macros {
         to_layer_0: to_layer_0 {
