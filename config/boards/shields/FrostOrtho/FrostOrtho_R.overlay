@@ -61,7 +61,7 @@
         // input-processors = <&mouse_runtime_input_processor>;
         input-processors = <
             &mouse_runtime_input_processor
-            &zip_temp_layer 6 100000 // AMLレイヤー、タイムアウト時間
+            &zip_temp_layer 3 100000 // AMLレイヤー、タイムアウト時間
             &zip_xy_scaler 2 3 // カーソル移動量2/3倍
             &zip_xy_transform INPUT_TRANSFORM_X_INVERT // カーソルの移動方向調整
             &zip_xy_transform INPUT_TRANSFORM_Y_INVERT // カーソルの移動方向調整
@@ -71,7 +71,7 @@
 
 &trackball_listener {
     scroller_y {
-        layers = <5>; // 縦スクロールレイヤー
+        layers = <4>; // 縦スクロールレイヤー
         input-processors = <
             // &scroll_runtime_input_processor
             &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) // スクロール方向調整
@@ -81,7 +81,7 @@
         >;
     };
     scroller_x {
-        layers = <7>; // 横スクロールレイヤー
+        layers = <5>; // 横スクロールレイヤー
         input-processors = <
             &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT) // スクロール方向調整
             &zip_xy_to_scroll_mapper
