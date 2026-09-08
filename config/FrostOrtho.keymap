@@ -135,7 +135,7 @@
 &kp ESCAPE  &kp F1           &kp F2   &kp F3   &kp F4               &kp DELETE  &kp PG_UP  &kp UP_ARROW  &kp PAGE_DOWN  &kp BACKSPACE
 &kp TAB     &kp F5           &kp F6   &kp F7   &kp F8               &kp INS     &kp LEFT   &kp DOWN      &kp RIGHT      &kp ENTER
 &kp LSHIFT  &kp F9           &kp F10  &kp F11  &kp F12              &trans      &kp HOME   &trans        &kp END        &kp RIGHT_SHIFT
-&kp LCTRL   &kp PRINTSCREEN  &trans   &trans   &mo 4    &trans      &none       &trans     &trans        &trans         &kp RCTRL
+&kp LCTRL   &kp PRINTSCREEN  &trans   &mo 5    &mo 4    &trans      &none       &trans     &trans        &trans         &kp RCTRL
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
@@ -163,7 +163,7 @@
             sensor-bindings = <&scroll_up_down>, <&rsr_trans>;
         };
 
-        SCROLL {
+        VSCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
@@ -174,7 +174,7 @@
             sensor-bindings = <&scroll_up_down>, <&rsr_trans>;
         };
 
-        layer_5 {
+        HSCROLL {
             bindings = <
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
