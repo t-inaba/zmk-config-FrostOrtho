@@ -154,10 +154,10 @@
 
         MOUSE_BT {
             bindings = <
-&studio_unlock  &none         &none         &bt BT_CLR    &bt BT_CLR_ALL              &trans  &trans     &mkp MCLK  &trans     &trans
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &trans  &mkp LCLK  &mo 4      &mkp RCLK  &trans
-&trans          &trans        &trans        &trans        &trans                      &trans  &trans     &trans     &trans     &trans
-&trans          &trans        &trans        &trans        &trans          &trans      &trans  &trans     &trans     &trans     &trans
+&studio_unlock  &none         &none         &bt BT_CLR    &bt BT_CLR_ALL              &trans     &mkp MCLK  &trans     &trans  &trans
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &mkp LCLK  &mo 4      &mkp RCLK  &trans  &trans
+&trans          &trans        &trans        &trans        &trans                      &trans     &trans     &trans     &trans  &trans
+&trans          &trans        &trans        &trans        &trans          &trans      &trans     &trans     &trans     &trans  &trans
             >;
 
             sensor-bindings = <&scroll_up_down>, <&rsr_trans>;
