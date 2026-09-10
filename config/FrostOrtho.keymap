@@ -55,6 +55,11 @@
             bindings = <&kp LANG_ZENKAKUHANKAKU>;
             key-positions = <20 21>;
         };
+
+        VSCROLL {
+            bindings = <&mo 4>;
+            key-positions = <35 34>;
+        };
     };
 
     macros {
