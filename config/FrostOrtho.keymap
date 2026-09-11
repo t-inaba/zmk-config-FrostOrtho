@@ -103,7 +103,7 @@
             tap-ms = <20>;
             //tap-ms = <250>;
             //bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            bindings = <&msc MOVE_Y(160)>, <&msc MOVE_Y(-160)>;
+            bindings = <&msc MOVE_Y(240)>, <&msc MOVE_Y(-240)>;
         };
 
         vol_up_down: vol_up_down {
