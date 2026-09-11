@@ -2,6 +2,7 @@
 #include <behaviors/runtime-sensor-rotate.dtsi>
 #include <behaviors/runtime-sensor-rotate.dtsi>
 #include <behaviors.dtsi>
+#include <behaviors/runtime_macro.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -19,18 +20,60 @@
 &mkp_input_listener { input-processors = <&zip_temp_layer 3 10000>; };
 
 / {
-    combos {
-        compatible = "zmk,combos";
+    runtime_combo_defaults {
+        compatible = "cormoran,runtime-combo-defaults";
+
+        COMBO_ESC {
+            bindings = <&kp ESCAPE>;
+            key-positions = <0 1>;
+            display-name = "Esc";
+        };
+
+        COMBO_TAB {
+            bindings = <&kp TAB>;
+            key-positions = <10 11>;
+            display-name = "Tab";
+        };
 
         COMB_BS {
             bindings = <&kp BACKSPACE>;
             key-positions = <8 9>;
+            display-name = "Backspace";
         };
 
         COMBO_ENTER {
             bindings = <&kp ENTER>;
             key-positions = <18 19>;
+            display-name = "Enter";
         };
+
+        COMBO_DEL {
+            bindings = <&kp DELETE>;
+            key-positions = <7 8>;
+            display-name = "Del";
+        };
+
+        COMBO_INS {
+            bindings = <&kp INSERT>;
+            key-positions = <6 7>;
+            display-name = "Ins";
+        };
+
+        COMBO_ZENHAN {
+            bindings = <&kp JP_ZKHK>;
+            key-positions = <20 21>;
+            display-name = "ZENHAN";
+        };
+
+        VSCROLL {
+            bindings = <&mo 4>;
+            key-positions = <35 34>;
+            display-name = "VSCROLL";
+        };
+    };
+    
+    combos {
+        compatible = "zmk,combos";
 
         COMBO_ESC {
             bindings = <&kp ESCAPE>;
@@ -40,6 +83,16 @@
         COMBO_TAB {
             bindings = <&kp TAB>;
             key-positions = <10 11>;
+        };
+
+        COMB_BS {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <8 9>;
+        };
+
+        COMBO_ENTER {
+            bindings = <&kp ENTER>;
+            key-positions = <18 19>;
         };
 
         COMBO_DEL {
@@ -133,6 +186,7 @@
 &kp A                 &kp S         &kp D         &kp F        &kp G                                   &kp H        &kp J            &kp K        &kp L       &lt 4 MINUS
 &mt LEFT_SHIFT Z      &kp X         &kp C         &kp V        &kp B                                   &kp N        &kp M            &kp COMMA    &kp PERIOD  &mt RIGHT_SHIFT SLASH
 &mt LEFT_CONTROL TAB  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 SPACE  &lt 2 CAPSLOCK  &lt 1 INT_MUHENKAN      &lt 1 SPACE  &lt 2 BACKSPACE  &lt 3 ENTER  &lt 4 INT1  &mt RCTRL INT_YEN
+&rmacro 0
             >;
 
             sensor-bindings = <&scroll_up_down>, <&rsr_trans>;

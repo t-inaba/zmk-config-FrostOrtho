@@ -40,5 +40,24 @@ manifest:
     - name: zmk-behavior-runtime-sensor-rotate
       remote: cormoran
       revision: zmk-v0.3.0.0
+    # macro, combo, device-info, input-stream, physical-layout, custom-settings
+    - name: zmk-feature-runtime-macro
+      remote: cormoran
+      revision: zmk-v0.3.0.0
+    - name: zmk-feature-runtime-combo
+      remote: cormoran
+      revision: zmk-v0.3.0.0
+    - name: zmk-feature-device-info
+      remote: cormoran
+      revision: zmk-v0.3.0.0
+    - name: zmk-feature-input-stream
+      remote: cormoran
+      revision: zmk-v0.3.0.0
+    - name: zmk-feature-module-physical-layout
+      remote: cormoran
+      revision: zmk-v0.3.0.0
+    - name: zmk-feature-custom-settings
+      remote: cormoran
+      revision: zmk-v0.3.0.0
   self:
     path: config
