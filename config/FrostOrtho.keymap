@@ -7,7 +7,7 @@
 #include <dt-bindings/zmk/pointing.h>
 #include "keycode_japanese.h"
 
-#define MOUSE 6
+#define MOUSE 3
 
 &mt {
     flavor = "balanced";
@@ -16,7 +16,7 @@
 
 // AML クリックしたときにタイムアウトを延長
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 6 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 3 10000>; };
 
 / {
     combos {
