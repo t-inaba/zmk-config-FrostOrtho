@@ -16,31 +16,60 @@ manifest:
     #   revision: v0.3.0
     - name: zmk
       remote: cormoran
-      revision: v0.3-branch+dya
+      revision: main+dya
       import: app/west.yml
+    - name: zephyr
+      remote: cormoran
+      revision: v4.1.0+zmk-fixes+nrf-half-duplex-uart
+      clone-depth: 1
+      import:
+        name-blocklist:
+          - ci-tools
+          - hal_altera
+          - hal_cypress
+          - hal_infineon
+          - hal_microchip
+          - hal_nxp
+          - hal_openisa
+          - hal_xtensa
+          - hal_st
+          - hal_ti
+          - loramac-node
+          - mcuboot
+          - mcumgr
+          - net-tools
+          - openthread
+          - edtt
+          - trusted-firmware-m
     - name: zmk-driver-paw3222
       remote: sekigon-gonnoc
       revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
-      revision: v0.3.0
+      revision: main
     # DYA Studio モジュール
     - name: zmk-module-ble-management
       remote: cormoran
-      revision: zmk-v0.3.0.0
+      revision: main
     - name: zmk-module-battery-history
       remote: cormoran
       revision: main
     - name: zmk-module-settings-rpc
       remote: cormoran
-      revision: zmk-v0.3.0.0
+      revision: main
     - name: zmk-module-runtime-input-processor
       remote: cormoran
-      revision: zmk-v0.3.0.0
+      revision: main
     - name: zmk-behavior-runtime-sensor-rotate
       remote: cormoran
-      revision: zmk-v0.3.0.0
+      revision: main
     # macro, combo, device-info, input-stream, physical-layout, custom-settings
+    - name: zmk-feature-custom-settings
+      remote: cormoran
+      revision: main
+    - name: zmk-feature-fast-keymap
+      remote: cormoran
+      revision: main
     - name: zmk-feature-runtime-macro
       remote: cormoran
       revision: main
@@ -54,9 +83,6 @@ manifest:
       remote: cormoran
       revision: main
     - name: zmk-feature-module-physical-layout
-      remote: cormoran
-      revision: main
-    - name: zmk-feature-custom-settings
       remote: cormoran
       revision: main
   self:
