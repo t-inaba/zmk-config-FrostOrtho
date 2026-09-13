@@ -21,7 +21,8 @@
 
 &zip_temp_layer {
     // キー入力後400ms以内はAMLに切り替わらない
-    require-prior-idle-ms = <400>;
+    //require-prior-idle-ms = <400>;
+    require-prior-idle-ms = <500>;
     // AMLから離脱しないキー
     excluded-positions = <
         6 // U 中央クリック
@@ -92,6 +93,8 @@
             &zip_scroll_y_scaler 0 3 // Y軸スクロール量0/3倍
         >;
     };
+    input-processors = //<&mouse_runtime_input_processor>,
+        <&zip_temp_layer 3 500>;
 };
 
 &pinctrl {
