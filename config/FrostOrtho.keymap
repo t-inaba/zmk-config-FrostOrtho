@@ -1,6 +1,5 @@
 #include <input/processors.dtsi>
 #include <behaviors/runtime-sensor-rotate.dtsi>
-#include <behaviors/runtime-sensor-rotate.dtsi>
 #include <behaviors/runtime_macro.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -17,7 +16,8 @@
 
 // AML クリックしたときにタイムアウトを延長
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 3 10000>; };
+//&mkp_input_listener { input-processors = <&zip_temp_layer 3 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 3 600>; };
 
 / {
     runtime_combo_defaults {
