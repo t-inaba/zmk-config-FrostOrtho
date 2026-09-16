@@ -21,8 +21,8 @@
 
 &zip_temp_layer {
     // キー入力後400ms以内はAMLに切り替わらない
-    //require-prior-idle-ms = <400>;
-    require-prior-idle-ms = <500>;
+    require-prior-idle-ms = <400>;
+    //require-prior-idle-ms = <500>;
     // AMLから離脱しないキー
     excluded-positions = <
         6 // U 左クリック
