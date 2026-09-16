@@ -154,11 +154,9 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             tap-ms = <20>;
-
             //tap-ms = <250>;
             //bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            bindings = <&msc MOVE_Y(320)>, <&msc MOVE_Y(-320)>;
+            bindings = <&msc MOVE_Y(360)>, <&msc MOVE_Y(-360)>;
         };
 
         vol_up_down: vol_up_down {
@@ -217,7 +215,7 @@
 
         MOUSE {
             bindings = <
-&none   &none   &none   &none   &none               &none   &none      &mkp MCLK  &none      &none
+&none   &none   &none   &none   &none               &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &none
 &none   &none   &none   &none   &none               &none   &mkp LCLK  &mo 4      &mkp RCLK  &none
 &trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans     &trans     &trans
