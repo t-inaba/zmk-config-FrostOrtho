@@ -15,8 +15,8 @@
 };
 
 // AML クリックしたときにタイムアウトを延長
-
 //&mkp_input_listener { input-processors = <&zip_temp_layer 3 10000>; };
+
 &mkp_input_listener { input-processors = <&zip_temp_layer 3 600>; };
 
 / {
@@ -215,12 +215,12 @@
             sensor-bindings = <&rsr_vol &rsr_trans>;
         };
 
-        MOUSE_BT {
+        MOUSE {
             bindings = <
-&studio_unlock  &none         &none         &bt BT_CLR    &bt BT_CLR_ALL              &none   &none      &mkp MCLK  &none      &none
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &none   &mkp LCLK  &mo 4      &mkp RCLK  &none
-&trans          &trans        &trans        &trans        &trans                      &trans  &trans     &trans     &trans     &trans
-&trans          &trans        &trans        &trans        &trans          &trans      &trans  &trans     &trans     &trans     &trans
+&none   &none   &none   &none   &none               &none   &none      &mkp MCLK  &none      &none
+&none   &none   &none   &none   &none               &none   &mkp LCLK  &mo 4      &mkp RCLK  &none
+&trans  &trans  &trans  &trans  &trans              &trans  &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans     &trans     &trans
             >;
 
             sensor-bindings = <&scroll_up_down>, <&rsr_trans>;
@@ -230,7 +230,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &sl 6               &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
             >;
 
@@ -248,12 +248,12 @@
             sensor-bindings = <&scroll_up_down>, <&rsr_trans>;
         };
 
-        layer_6 {
+        BT {
             bindings = <
-&trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans
+&studio_unlock  &trans        &trans        &bt BT_CLR    &bt BT_CLR_ALL              &trans  &trans  &trans  &trans  &trans
+&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans                      &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&rsr_vol &rsr_trans>;
