@@ -42,10 +42,6 @@
     >;
 };
 
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 3 700>;
-};
-
 / {
     input_processors {
         zip_scroll_x_scaler: zip_scroll_x_scaler {

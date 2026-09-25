@@ -17,7 +17,9 @@
 // AML クリックしたときにタイムアウトを延長
 //&mkp_input_listener { input-processors = <&zip_temp_layer 3 10000>; };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 3 600>; };
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 3 700>;
+};
 
 / {
     runtime_combo_defaults {
