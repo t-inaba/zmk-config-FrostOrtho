@@ -36,8 +36,14 @@
         29 // / 右Shift
         30 // 左Control
         32 // Alt
+        33 // 左レイヤー3
+        38 // 右レイヤー3
         40 // 右Ctrl
     >;
+};
+
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 3 700>;
 };
 
 / {
