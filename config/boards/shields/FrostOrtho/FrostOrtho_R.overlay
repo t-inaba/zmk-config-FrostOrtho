@@ -21,8 +21,8 @@
 
 &zip_temp_layer {
     // キー入力後400ms以内はAMLに切り替わらない
-    require-prior-idle-ms = <400>;
-    //require-prior-idle-ms = <500>;
+    //require-prior-idle-ms = <400>;
+    require-prior-idle-ms = <500>;
     // AMLから離脱しないキー
     excluded-positions = <
         6 // U 左クリック
@@ -61,7 +61,30 @@
     };
 };
 
+
 / {
+    /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <500>;
+        excluded-positions = <
+            6 // U 左クリック
+            7 // I 中央クリック
+            8 // O 右クリック
+            15 // H 誤爆防止
+            16 // J 左クリック
+            17 // K 縦スクロール(レイヤー4)
+            18 // L 右クリック
+            20 // Z Shift
+            29 // / 右Shift
+            30 // 左Control
+            32 // Alt
+            33 // 左レイヤー3
+            38 // 右レイヤー3
+            40 // 右Ctrl
+        >;
+    };
+
     trackball_listener: trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
@@ -105,7 +128,7 @@
         <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,       // Y軸反転
         <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,       // X軸反転
         <&zip_xy_scaler 2 3>,                               // カーソル移動量2/3倍
-        <&zip_temp_layer 3 600>;                            // AMLレイヤー、タイムアウト時間
+        <&zip_temp_layer 3 700>;                            // AMLレイヤー、タイムアウト時間
 };
 
 &pinctrl {
