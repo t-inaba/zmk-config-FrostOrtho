@@ -126,6 +126,24 @@
             label = "TO_LAYER_0";
         };
 
+        hold_mouse_layer: hold_mouse_layer {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_on MOUSE>;
+            label = "hold_mouse_layer";
+        };
+
+        release_mouse_layer: release_mouse_layer {
+            compatible = "zmk,behavior-macro";
+            wait-ms = <0>;
+            tap-ms = <0>;
+            #binding-cells = <0>;
+            bindings = <&tog_off MOUSE>;
+            label = "release_mouse_layer";
+        };
+
         screenshot: screenshot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -148,6 +166,20 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
+        };
+
+        tog_on: toggle_layer_on_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer On";
+            toggle-mode = "on";
+        };
+
+        tog_off: toggle_layer_off_only {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle Layer Off";
+            toggle-mode = "off";
         };
 
         // Kyemap Editor用
