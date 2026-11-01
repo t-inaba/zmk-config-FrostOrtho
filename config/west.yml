@@ -82,18 +82,9 @@ manifest:
     - name: zmk-feature-module-physical-layout
       remote: cormoran
       revision: main
-    - name: zmk-module-ble-management
-      remote: cormoran
-      revision: main
     - name: zmk-feature-default-layer
       remote: cormoran
       revision: codex/custom-rpc-rewrite
-    - name: zmk-module-settings-rpc
-      remote: cormoran
-      revision: main
-    - name: zmk-feature-custom-settings
-      remote: cormoran
-      revision: main
     - name: zmk-feature-device-info
       remote: cormoran
       revision: main
