@@ -61,11 +61,11 @@
             display-name = "Ins";
         };
 
-        //COMBO_ZENHAN {
-        //    bindings = <&kp JP_ZKHK>;
-        //    key-positions = <20 21>;
-        //    display-name = "ZENHAN";
-        //};
+        COMBO_ZENHAN {
+            bindings = <&kp JP_ZKHK>;
+            key-positions = <20 21>;
+            display-name = "ZENHAN";
+        };
 
         VSCROLL {
             bindings = <&mo 4>;
