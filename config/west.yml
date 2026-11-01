@@ -82,9 +82,6 @@ manifest:
     - name: zmk-feature-module-physical-layout
       remote: cormoran
       revision: main
-    - name: zmk-module-runtime-input-processor
-      remote: cormoran
-      revision: main
     - name: zmk-module-ble-management
       remote: cormoran
       revision: main
