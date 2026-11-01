@@ -85,6 +85,9 @@ manifest:
     - name: zmk-feature-default-layer
       remote: cormoran
       revision: codex/custom-rpc-rewrite
+    - name: zmk-feature-os-detection
+      remote: cormoran
+      revision: main
     - name: zmk-feature-device-info
       remote: cormoran
       revision: main
